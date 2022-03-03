@@ -7,8 +7,7 @@ export default function Index() {
   return (
     <>
       <Wrapper bgColor="#5261AC">
-        <Heading label="Welcome to my Library" />
-        <Button label="click me!" />
+        <NavBar />
       </Wrapper>
     </>
   );
