@@ -9,6 +9,7 @@ import {
 import type { LinksFunction, LoaderFunction } from "remix";
 import type { MetaFunction } from "remix";
 import tailwindUrl from "./styles/tailwind.css";
+import NavBar from "./components/molecules/NavBar/NavBar";
 
 export const meta: MetaFunction = () => {
   return { title: "New Remix App" };
@@ -27,6 +28,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
+      <NavBar />
       <body>
         <Outlet />
         <ScrollRestoration />

@@ -8,7 +8,7 @@ export default function Index() {
     <>
       <Wrapper bgColor="#5261AC">
         <Heading label="Welcome to my Library" />
-        <Button label="click me!" />
+        <Button label="click my atom!" />
       </Wrapper>
     </>
   );
