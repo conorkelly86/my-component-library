@@ -7,8 +7,8 @@ export const Wrapper: React.FC<WrapperProps> = ({ children, bgColor }) => {
   return (
     <>
       <div className="flex h-screen" style={{ background: bgColor }}>
-        <div className="m-auto">
-          <div className="text-center my-5">{children}</div>
+        <div className="m-auto ">
+          <div className="text-center my-5 px-6">{children}</div>
         </div>
       </div>
     </>
