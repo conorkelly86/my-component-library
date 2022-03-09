@@ -1,13 +1,33 @@
-import variants from "./buttons.json";
+import React from "react";
+import "./button.css";
 
-export interface ButtonProps {
+interface ButtonProps {
+  primary?: boolean;
+  backgroundColor?: string;
+  size?: "small" | "medium" | "large";
   label: string;
-  variant?: "primary" | "secondary";
+  onClick?: () => void;
 }
 
-export const Button = ({ label = "Label", variant }: ButtonProps) => {
+export const Button = ({
+  primary = false,
+  size = "medium",
+  backgroundColor,
+  label,
+  ...props
+}: ButtonProps) => {
+  const mode = primary
+    ? "storybook-button--primary"
+    : "storybook-button--secondary";
   return (
-    <button className="p-2 pl-5 pr-5 bg-blue-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300">
+    <button
+      type="button"
+      className={["storybook-button", `storybook-button--${size}`, mode].join(
+        " "
+      )}
+      style={{ backgroundColor }}
+      {...props}
+    >
       {label}
     </button>
   );

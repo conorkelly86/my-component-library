@@ -10,6 +10,7 @@ import type { LinksFunction, LoaderFunction } from "remix";
 import type { MetaFunction } from "remix";
 import tailwindUrl from "./styles/tailwind.css";
 import NavBar from "./components/molecules/NavBar/NavBar";
+import { ChakraProvider } from "@chakra-ui/react";
 
 export const meta: MetaFunction = () => {
   return { title: "New Remix App" };
@@ -30,7 +31,9 @@ export default function App() {
       </head>
       <NavBar />
       <body>
-        <Outlet />
+        <ChakraProvider>
+          <Outlet />
+        </ChakraProvider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
