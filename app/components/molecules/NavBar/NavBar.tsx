@@ -6,10 +6,10 @@ import logo from "./logo.svg";
 import user from "./user.svg";
 
 const navigation = [
-  { name: "Atoms", href: "/atoms", current: false },
-  { name: "Molecules", href: "/molecules", current: false },
-  { name: "Organisms", href: "/organisms", current: false },
-  { name: "Templates", href: "/templates", current: false },
+  { name: "Atoms", href: "/atoms", current: false, id: "atoms" },
+  { name: "Molecules", href: "/molecules", current: false, id: "molecules" },
+  { name: "Organisms", href: "/organisms", current: false, id: "organisms" },
+  { name: "Templates", href: "/templates", current: false, id: "templates" },
 ];
 
 function classNames(...classes: any) {
@@ -35,7 +35,7 @@ export default function NavBar() {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <a href="/">
+                <a href="/" id="logo">
                   <div className="flex-shrink-0 flex items-center">
                     <img
                       className="block lg:hidden h-8 w-8"
@@ -62,6 +62,7 @@ export default function NavBar() {
                           "px-3 py-2 rounded-md text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
+                        id={item.id}
                       >
                         {item.name}
                       </a>
