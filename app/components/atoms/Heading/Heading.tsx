@@ -6,7 +6,9 @@ export interface HeadingProps {
 export const Heading: React.FC<HeadingProps> = ({ label }) => {
   return (
     <>
-      <div className="text-center text-4xl my-4">{label}</div>
+      <div className="text-center text-4xl my-4" id="heading">
+        {label}
+      </div>
     </>
   );
 };

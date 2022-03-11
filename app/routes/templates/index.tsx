@@ -6,7 +6,9 @@ import { Wrapper } from "~/components/organisms/Wrapper/Wrapper";
 export default function Index() {
   return (
     <>
-      <Wrapper bgColor="#5261AC">Templates will go here</Wrapper>
+      <Wrapper bgColor="#5261AC">
+        <Heading label="Templates" />
+      </Wrapper>
     </>
   );
 }

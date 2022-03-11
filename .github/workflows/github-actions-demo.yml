@@ -10,5 +10,5 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: Run Linter
-      - uses: github/super-linter@v3
+      - name: Cypress run
+        uses: cypress-io/github-action@v2

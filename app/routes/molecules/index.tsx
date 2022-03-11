@@ -10,6 +10,8 @@ export default function Index() {
   return (
     <>
       <Wrapper bgColor="#5261AC">
+        <Heading label="Molecules" />
+
         <MyLinks />
         <Spacer />
 
